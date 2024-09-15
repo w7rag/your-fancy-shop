@@ -1,0 +1,157 @@
+.admin-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: var(--box-background);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.admin-sidebar {
+    width: 200px;
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+}
+
+.admin-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.admin-sidebar li {
+    margin-bottom: 10px;
+}
+
+.admin-sidebar a {
+    display: block;
+    padding: 10px;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-sidebar a.active,
+.admin-sidebar a:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.admin-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.admin-content section {
+    display: none;
+}
+
+.admin-content section.active {
+    display: block;
+}
+
+#admin-chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.admin-chat-input {
+    display: flex;
+}
+
+#admin-chat-text {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px 0 0 5px;
+}
+
+#admin-chat-send {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.admin-setting {
+    margin-top: 20px;
+}
+
+#display-username {
+    padding: 5px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#save-display-username {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ping */
+
+/* Add these styles to your existing admin.css file */
+
+.notification-badge {
+    background-color: #ff4444;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.bot-message {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.bot-message .bot-name {
+    font-weight: bold;
+    color: #4A90E2;
+}
+
+.bot-message .verified-badge {
+    color: #4A90E2;
+    margin-left: 5px;
+}
+
+#news-content {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.news-item {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.news-item .news-author {
+    font-weight: bold;
+    color: #4A90E2;
+}
+
+.news-item .news-timestamp {
+    font-size: 0.8em;
+    color: #888;
+}

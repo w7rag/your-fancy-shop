@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Your Fancy Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <ul>
+                <li><a href="#chat" class="active"><i class="fas fa-comments"></i> Admin Chat</a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Admin Settings</a></li>
+                <li><a href="#news"><i class="fas fa-newspaper"></i> News <span id="news-notification" class="notification-badge" style="display: none;"></span></a></li>
+            </ul>
+        </aside>
+        <main class="admin-content">
+            <section id="chat" class="active">
+                <h2>Admin Chat</h2>
+                <div id="admin-chat-messages"></div>
+                <div class="admin-chat-input">
+                    <input type="text" id="admin-chat-text" placeholder="Type your message...">
+                    <button id="admin-chat-send"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </section>
+            <section id="settings">
+                <h2>Admin Settings</h2>
+                <div class="admin-setting">
+                    <label for="display-username">Display Username:</label>
+                    <input type="text" id="display-username">
+                    <button id="save-display-username">Save</button>
+                </div>
+            </section>
+            <section id="news">
+                <h2>News</h2>
+                <div id="news-content"></div>
+                <div id="news-input" class="admin-chat-input">
+                    <input type="text" id="news-text" placeholder="Type your news...">
+                    <button id="news-send"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

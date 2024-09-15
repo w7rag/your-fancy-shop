@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Your Fancy Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="settings.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <div class="settings-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#main" class="active">Main Settings</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#account">Account</a></li>
+            </ul>
+        </aside>
+        
+        <main class="settings-content">
+            <section id="main" class="active">
+                <h1>Settings</h1>
+                <div class="setting-group">
+                    <h2>Language</h2>
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <h2>Theme</h2>
+                    <div class="theme-options">
+                        <button class="theme-btn" data-theme="light">Light</button>
+                        <button class="theme-btn" data-theme="dark">Dark</button>
+                        <button class="theme-btn" data-theme="purple">Purple</button>
+                    </div>
+                </div>
+            </section>
+            <section id="feedback">
+                <h1>Feedback</h1>
+                <div class="feedback-form">
+                    <div class="star-rating">
+                        <i class="fas fa-star" data-rating="1"></i>
+                        <i class="fas fa-star" data-rating="2"></i>
+                        <i class="fas fa-star" data-rating="3"></i>
+                        <i class="fas fa-star" data-rating="4"></i>
+                        <i class="fas fa-star" data-rating="5"></i>
+                    </div>
+                    <textarea id="feedback-text" placeholder="Enter your feedback here..."></textarea>
+                    <button id="submit-feedback">Submit Feedback</button>
+                </div>
+                <div class="feedback-list">
+                    <!-- Feedback items will be dynamically added here -->
+                </div>
+            </section>
+            <section id="account">
+                <h2><i class="fas fa-user"></i> Account</h2>
+                <div id="login-register-section">
+                    <h3>Login</h3>
+                    <form id="login-form">
+                        <input type="text" id="login-username" placeholder="Username" required>
+                        <input type="password" id="login-password" placeholder="Password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                    <h3>Register</h3>
+                    <form id="register-form">
+                        <input type="text" id="register-username" placeholder="Username" required>
+                        <input type="email" id="register-email" placeholder="Email" required>
+                        <input type="password" id="register-password" placeholder="Password" required>
+                        <button type="submit">Register</button>
+                    </form>
+                    
+                </div>
+                <div id="account-section" style="display: none;">
+                    <h3>Manage Account</h3>
+                    <p>Welcome, <span id="account-username"></span>!</p>
+                    <form id="change-username-form">
+                        <input type="text" id="new-username" placeholder="New Username" required>
+                        <button type="submit">Change Username</button>
+                    </form>
+                    <form id="change-password-form">
+                        <input type="password" id="old-password" placeholder="Old Password" required>
+                        <input type="password" id="new-password" placeholder="New Password" required>
+                        <input type="password" id="confirm-password" placeholder="Confirm New Password" required>
+                        <button type="submit">Change Password</button>
+                    </form>
+                    <button id="delete-account-button">Delete Account</button>
+                    <button id="logout-button">Logout</button>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+
+    <script src="settings.js"></script>
+    <script src="global.js"></script>
+</body>
+</html>
